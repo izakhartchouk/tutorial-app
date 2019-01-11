@@ -1,0 +1,12 @@
+<h2 class="title">My Heroes</h2>
+<nav>
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes"
+        (click)="activateClass(hero)"
+        [ngClass]="{'active': hero.active}"
+        class="hero">
+      <a href="#"
+         class="name">{{hero.name}}</a>
+    </li>
+  </ul>
+</nav>
