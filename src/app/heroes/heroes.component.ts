@@ -9,12 +9,7 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroesComponent implements OnInit {
 
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm',
-    active: true
-  };
-
+  selectedHero: Hero;
   heroes = HEROES;
 
   constructor() { }
@@ -22,7 +17,7 @@ export class HeroesComponent implements OnInit {
   ngOnInit() {
   }
 
-  activateClass(hero: Hero) {
-    hero.active = !hero.active;
+  onClick(hero: Hero) {
+    this.selectedHero = hero;
   }
 }

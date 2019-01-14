@@ -1,32 +1,55 @@
-.hero {
-    height: 25px;
-    float: left;
-    margin-right: 0px;
-    border-right: 1px solid #aaa;
-    padding: 0 20px;
+/* HeroesComponent's private CSS styles */
+
+.selected {
+    background-color: #CFD8DC !important;
+    color: white;
 }
 
-.hero:last-child {
-    border-right: none;
+.heroes {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
 }
 
-.hero .name {
-    text-decoration: none;
-    color: #ccc;
-    font: 25px/1 Helvetica, Verdana, sans-serif;
-    text-transform: uppercase;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+.heroes li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
 }
 
-.hero .name:hover {
-    color: #666;
+.heroes li.selected:hover {
+    background-color: #BBD8DC !important;
+    color: white;
 }
 
-.hero.active .name {
-    font-weight: bold;
-    color: #333;
+.heroes li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+}
+
+.heroes .text {
+    position: relative;
+    top: -3px;
+}
+
+.heroes .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
 }
